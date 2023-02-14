@@ -3,6 +3,7 @@ import java.util.Stack;
 
 public class ConsoleExercises {
 
+
     public static void main(String[] arg){
 //        double pi = 3.14159;
 //        System.out.format("The value of pi is approximately "+"%.2f%n",pi);

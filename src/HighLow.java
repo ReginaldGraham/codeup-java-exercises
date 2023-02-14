@@ -25,7 +25,7 @@ public class HighLow {
             }
             else{
                 System.out.println("you lost");
-                System.out.println(ranNumber);
+                System.out.printf("the number is: %s", ranNumber);
             }
         }
     }
