@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Person {
     private String name;
 
@@ -28,12 +30,31 @@ public class Person {
     }
 
 
-    public static Person[] addPerson(Person[] people, Person newperson){
-        Person[] newPeople= new Person[people.length+1];
-        for(int i=0; i< people.length; i++){
-            newPeople[i]=people[i];
+//    public static Person[] addPerson(Person[] people, Person newperson){
+//        Person[] newPeople= new Person[people.length+1];
+//        for(int i=0; i< people.length; i++){
+//            newPeople[i]=people[i];
+//        }
+//        newPeople[people.length]=newperson;
+//        return newPeople;
+//    }
+
+    public static Person[] addPerson(Person[] people, Person person ){
+        Person[] newpeopleArray = Arrays.copyOf(people, people.length+1);
+        newpeopleArray[newpeopleArray.length-1]=person;
+        return newpeopleArray;
+    };
+
+    public static Person[] addPersonAtFront(Person[] people, Person person ){
+        Person[] newpeopleArray = Arrays.copyOf(people, people.length+1);
+        for(int i =0;i< newpeopleArray.length; i+=1){
+            Person currentPerson= newpeopleArray[i];
+
         }
-        newPeople[people.length]=newperson;
-        return newPeople;
-    }
+        newpeopleArray[newpeopleArray.length-1]=person;
+        return newpeopleArray;
+    };
+
+
 }
+

@@ -8,6 +8,7 @@ public class ArraysExercises {
 
         int[] numbers = {1, 2, 3, 4, 5};
 //        System.out.println(numbers);
+        System.out.println(Arrays.toString(numbers));
 
         Person[] personArray = new Person[3];
 
@@ -15,16 +16,21 @@ public class ArraysExercises {
         personArray[1] = new Person("myself");
         personArray[2] = new Person("i");
 
-        for( Person persons : personArray){
+//        for( Person persons : personArray){
+//            System.out.println(persons.getName());
+//        }
+
+//        Person newPerson = new Person("you");
+//        Person[] updatedPersonArray = Person.addPerson(personArray, newPerson);
+//        for (Person person : updatedPersonArray) {
+//            System.out.println(person.getName());
+//        }
+
+        personArray=Person.addPerson(personArray, new Person("steve"));
+
+        for( Person persons : personArray) {
             System.out.println(persons.getName());
         }
-
-        Person newPerson = new Person("you");
-        Person[] updatedPersonArray = Person.addPerson(personArray, newPerson);
-        for (Person person : updatedPersonArray) {
-            System.out.println(person.getName());
-        }
-
     }
 //    Needed to move it to Person.java for Person.addPerson to work
 
@@ -36,6 +42,7 @@ public class ArraysExercises {
 //        newPeople[people.length]=newperson;
 //        return newPeople;
 //    }
+
 }
 
 
