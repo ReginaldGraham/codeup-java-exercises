@@ -8,6 +8,9 @@ public class Input {
     public Input() {
        scanner=new Scanner(System.in);
     }
+   public double getDouble(){
+       return scanner.nextDouble();
+    }
     public String getString(){
         return scanner.nextLine();
     };
@@ -15,7 +18,7 @@ public class Input {
 String input= scanner.nextLine();
 return input.equalsIgnoreCase("y") ||input.equalsIgnoreCase("yes");
    }
-    int getInt(int min, int max){
+    public int getInt(int min, int max){
         int value;
         do {
             System.out.print("Enter an integer between " + min + " and " + max + ": ");
@@ -28,10 +31,10 @@ return input.equalsIgnoreCase("y") ||input.equalsIgnoreCase("yes");
         scanner.nextLine(); // Consume the newline character
         return value;
     }
-    int getInt(){
+   public int getInt(){
      return scanner.nextInt();
     }
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
         double value;
         do {
             System.out.print("Enter a decimal between " + min + " and " + max + ": ");
@@ -44,9 +47,6 @@ return input.equalsIgnoreCase("y") ||input.equalsIgnoreCase("yes");
         scanner.nextLine(); // Consume the newline character
         return value;
 
-    }
-    double getDouble(){
-       return scanner.nextDouble();
     }
 
 }
